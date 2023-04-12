@@ -109,7 +109,7 @@ AppAsset::register($this);
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                                     <?php echo Yii::$app->user->identity->username ?>
                                 </span>
-                                <img class="img-profile rounded-circle" src="/img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -136,9 +136,9 @@ AppAsset::register($this);
                 <!-- End of Topbar -->
 
                 <div class="p-4">
-                    <?php echo $content ?>
                 </div>
-
+                
+                <?php echo $content ?>
             </div>
             <!-- End of Main Content -->
 
@@ -152,9 +152,9 @@ AppAsset::register($this);
                             <?= date('Y') ?>
                         </div>
 
-                        <div class="col text-right">
+                        <!-- <div class="col text-right">
                             Created by <a href="https://youtube.com/TheCodeholic" target="_blank">TheCodeholic</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </footer>

@@ -2,15 +2,16 @@ Options +FollowSymlinks
 RewriteEngine On
 
 # ===================== admin =====================
-RewriteCond %{REQUEST_URI} ^/(admin)
+RewriteCond %{REQUEST_URI} ^/(backend)
 RewriteRule ^backend/assets/(.*)$ backend/web/assets/$1 [L]
 RewriteRule ^backend/css/(.*)$ backend/web/css/$1 [L]
-RewriteRule ^backend/images/(.*)$ backend/web/img/$1 [L]
+RewriteRule ^backend/img/(.*)$ backend/web/img/$1 [L]
 RewriteRule ^backend/js/(.*)$ backend/web/js/$1 [L]
-RewriteRule ^backend/fonts/(.*)$ frontend/web/fonts/$1 [L]
-RewriteRule ^backend/icon/(.*)$ frontend/web/icon/$1 [L]
+RewriteRule ^backend/fonts/(.*)$ backend/web/fonts/$1 [L]
+RewriteRule ^backend/icon/(.*)$ backend/web/icon/$1 [L]
+RewriteRule ^backend/vendor/(.*)$ backend/web/vendor/$1 [L]
 
-RewriteCond %{REQUEST_URI} !^/backend/web/(assets|css|img|js|fonts|icon)/
+RewriteCond %{REQUEST_URI} !^/backend/web/(assets|css|img|js|fonts|icon|vendor)/
 RewriteCond %{REQUEST_URI} ^/(backend)
 RewriteRule ^.*$ backend/web/index.php [L]
 # ===================== end admin =====================
